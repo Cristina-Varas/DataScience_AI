@@ -1,0 +1,83 @@
+# Ejercicio 1###################################################################
+# a)
+a = 0:10
+n = 10
+p = 0.2
+b = dbinom(a, 10, 0.2)
+print(b)
+barplot(b, main="Distribución binomial n = 0:10, p = 0,2")
+
+for (X_exitos in a){
+   resultado = dbinom(X_exitos, n, p)
+   print(resultado)
+   sumatorio = sumatorio + resultado
+}
+print(sumatorio)
+
+a = 0:10
+b = dbinom(a, 10, 0.5)
+print(b)
+barplot(b, main="Distribución binomial n = 0:10, p = 0,5")
+
+a = 0:10
+b = dbinom(a, 10, 0.7)
+print(b)
+barplot(b, main="Distribución binomial n = 0:10, p = 0,7")
+
+a = 0:10
+b = dbinom(a, 10, 0.9)
+print(b)
+barplot(b, main="Distribución binomial n = 0:10, p = 0,9")
+
+
+# Otra forma
+plot(dbinom(0:10, 10, 0.2), type = "h", lwd = 2, main = "Distribución binomial n = 0:10, p = 0,2",
+     ylab = "P(X=x)", xlab = "Numero de eventos", col = "black")
+
+plot(dbinom(0:10, 10, 0.5), type = "h", lwd = 2, main = "Distribución binomial n = 0:10, p = 0,5",
+     ylab = "P(X=x)", xlab = "Numero de eventos", col = "blue")
+
+plot(dbinom(0:10, 10, 0.7), type = "h", lwd = 2, main = "Distribución binomial n = 0:10, p = 0,7",
+     ylab = "P(X=x)", xlab = "Numero de eventos", col = "red")
+
+plot(dbinom(0:10, 10, 0.9), type = "h", lwd = 2, main = "Distribución binomial n = 0:10, p = 0,9",
+     ylab = "P(X=x)", xlab = "Numero de eventos", col = "green")
+
+################################################################################
+# Grid of X-axis values
+dbinom(x, size=10, prob = 0,2)
+dbinom(x, size=10, prob = 0,5)
+dbinom(x, size=10, prob = 0,7)
+dbinom(x, size=10, prob = 0,9)
+
+x <- 1:10
+
+#probabilidades
+dbinom(x = 1:10, size = 10, prob = 0.2)
+dbinom(x = 1:10, size = 10, prob = 0.5)
+dbinom(x = 1:10, size = 10, prob = 0.7)
+dbinom(x = 1:10, size = 10, prob = 0.9)
+
+x = 0:10
+# size = 10, prob = 0.2
+plot(dbinom(x, size = 10, prob = 0.2), type = "h", lwd = 2,
+     main = "Función de probabilidad binomial",
+     ylab = "P(X = x)", xlab = "Número de éxito")
+
+# size = 10, prob = 0.5
+lines(dbinom(x, size = 10, prob = 0.5), type = "h",
+      lwd = 2, col = rgb(1,0,0, 0.7))
+
+# size = 10, prob = 0.7
+lines(dbinom(x, size = 10, prob = 0.7), type = "h",
+      lwd = 2, col = rgb(0, 1, 0, 0.7))
+
+# size = 10, prob = 0.9
+lines(dbinom(x, size = 10, prob = 0.9), type = "h",
+      lwd = 2, col = rgb(0, 0, 1, 0.7))
+
+# Add a legend
+legend("topright", legend = c("10  0.2", "10  0.5", "10  0.7", "10 0.9"),
+       title = "Tamaño  Prob", title.adj = 0.95,
+       lty = 1, col = 1:4, lwd = 2, box.lty = 0)
+

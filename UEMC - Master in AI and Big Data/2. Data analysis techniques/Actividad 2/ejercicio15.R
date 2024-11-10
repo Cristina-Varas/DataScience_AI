@@ -1,0 +1,14 @@
+# Desviacion tipica conocida
+desviacion <- 0.7
+
+# Media poblacional teorica
+mu = 7.8
+
+# Muestra de 10 varillas
+datos <- c(8.1, 7.8, 7.9, 8.0, 7.2, 8.4, 8.3, 8.3, 7.7, 7.4)
+
+# Intervalo confianza y contraste de hipótesis para el tamanio medio poblacionalida
+library(TeachingDemos)
+alpha <- 0.05
+z.test(datos, mu, desviacion, conf.level = 1-alpha)
+
