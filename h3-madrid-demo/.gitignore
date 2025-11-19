@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Envs
+.env
+.venv
+env/
+venv/
+*.egg-info/
+
+# Data (si no quieres subirlo todo)
+data/raw/*
+data/processed/*
+
+# VS Code
+.vscode/
